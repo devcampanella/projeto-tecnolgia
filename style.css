@@ -1,0 +1,191 @@
+body{
+    margin: 0;
+    background-color: #eeeeee;
+    font-family: tahoma;
+}
+
+h2{
+    margin: 0 0 5px 0; /*top right bottom left*/
+    color: #333;
+    font-size: 18px;
+}
+
+input[type="text"]{
+    width: 100%; /*100% do tamanho da coluna*/
+    background-color: #cccccc;
+    border: none;
+    margin-bottom: 5px;
+}
+
+form{
+    margin-top: 10px;
+}
+
+.total{
+    max-width: 1000px;
+    width: 96%;
+    margin: auto;    
+}
+
+#topo{
+    width: 100%;
+    height: auto;
+    background-color: #202020;
+    padding: 30px 0;    
+    display: table;
+}
+
+#logo{
+    float: left;
+}
+
+#menu{
+    float: right;
+    margin-top: 22px;
+}
+
+#menu a{
+    color: #FFF;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;
+    padding: 8px 25px;
+}
+
+#menu a:hover{
+    background-color: #FFF;
+    color: #202020;
+}
+
+#banner img{
+    width: 100%;
+}
+
+#principal{
+    width: 100%; /*1000px;*/
+    height: auto;
+    background-color: #003366;
+    color: #FFF;
+    padding: 20px;
+    box-sizing: border-box; /*faz com que não seja preciso diminuir a largura por causa do padding*/
+    font-size: 14px;
+    margin: 30px 0;
+}
+
+#principal h1{
+    margin: 0;
+    font-size: 20px;
+}
+
+#principal p{
+    margin-bottom: 0;
+}
+
+.coluna{
+    width: 22%; /*220px*/
+    float: left;
+    margin-right: 4%;
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+
+.coluna:last-child{
+    margin-right: 0;
+}
+
+.coluna img{
+    width: 100%; /*100% do tamanho da coluna*/
+}
+
+.botao{
+    background-color: #003366;
+    color: #FFF;
+    text-decoration: none;
+    display: inline-block;
+    padding: 3px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+#rodape{
+    width: 100%;
+    background-color: #202020;
+    clear: both;
+    text-align: center;
+    color: #cccccc;
+    font-size: 12px;
+    padding: 10px 0;
+}
+
+#icon-menu{
+    position: absolute;
+    top: 45px;
+    right: 10px;
+    display: none;
+}
+
+@media screen and (max-width:870px){
+    
+    #logo,#menu{
+        float: none;
+    }    
+ 
+    #topo{
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width:768px){
+    
+    .coluna{
+        width: 47%;
+        margin-right: 0;
+    }
+    
+    /*a partir do segundo filho (2n) a cada 2 filhos (+2)*/
+    .coluna:nth-child(2n+2){
+        float: right;
+    }
+    
+}
+
+@media screen and (max-width:640px){
+    #menu{
+        display: none;
+    }
+    
+    #menu a{
+        display: block;
+        background-color: #eee;
+        color: #202020;
+        margin-bottom: 1px;
+        padding: 15px 0;
+    }
+    
+    #icon-menu{
+        display: block;
+    }
+    
+    .coluna{
+        width: 100%;
+    }
+    
+   .coluna img{
+        /*display: none;*/
+        width: 30%;
+        float: left;
+        margin: 10px;        
+   }
+    
+   .coluna:last-child img{
+       display: none;
+   }
+    
+    form{
+        width: 60%;
+    }
+}
+
+
